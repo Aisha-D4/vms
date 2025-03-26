@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #E0F2F1; /* Light Teal */
+    background: linear-gradient(to right, #E0F2F1, #FFF3E0); /* Light Teal to Light Mustard */
+}
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease; /* Smooth transition for container width */
+}
+
+form {
+    margin: 0 2rem;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #004D40; /* Dark Teal */
+}
+
+/* Styling for the user type dropdown */
+.input-group.user-type {
+    text-align: center; /* Center-align the label and dropdown */
+    margin-bottom: 20px;
+}
+
+.input-group.user-type label {
+    display: block;
+    font-size: 1rem;
+    color: #004D40; /* Dark Teal */
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #757575;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #004D40; /* Dark Teal */
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group select:focus {
+    border-color: #DAA520; /* Dark Mustard */
+}
+
+.input-group select option {
+    background-color: #fff;
+    color: #004D40; /* Dark Teal */
+}
+
+input {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 15px;
+}
+
+.input-group {
+    padding: 1% 0;
+    position: relative;
+    margin-bottom: 20px; /* Added space between input groups */
+}
+
+.input-group i {
+    position: absolute;
+    color: #004D40; /* Dark Teal */
+}
+
+input:focus {
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid #DAA520; /* Dark Mustard */
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+label {
+    color: #757575;
+    position: relative;
+    left: 1.2em;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus~label, input:not(:placeholder-shown)~label {
+    top: -3em;
+    color: #DAA520; /* Dark Mustard */
+    font-size: 15px;
+}
+
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #008080; /* Teal */
+}
+
+.recover a:hover {
+    color: #004D40; /* Dark Teal */
+    text-decoration: underline;
+}
+
+.btn {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #008080; /* Teal */
+    color: white;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.btn:hover {
+    background: #004D40; /* Dark Teal */
+}
+
+.or {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #757575;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    color: #008080; /* Teal */
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid #dfe9f5;
+    margin: 0 15px;
+    transition: 1s;
+}
+
+.icons i:hover {
+    background: #004D40; /* Dark Teal */
+    font-size: 1.6rem;
+    border: 2px solid #008080; /* Teal */
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+    margin-top: 0.9rem;
+    font-weight: bold;
+}
+
+button {
+    color: #008080; /* Teal */
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    text-decoration: underline;
+    color: #004D40; /* Dark Teal */
+}
+
+/* Additional styling for dynamic fields */
+#volunteerFields, #organizationFields {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#organizationFields {
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#organizationFields.show {
+    display: block; /* Shown when "Organization" is selected */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adjust container width for organization */
+.container.organization-mode {
+    width: 400px; /* Slightly smaller width */
+}
